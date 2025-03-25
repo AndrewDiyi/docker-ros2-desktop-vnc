@@ -18,6 +18,9 @@ if [ "$USER" != "root" ]; then
     [ -d "/dev/snd" ] && chgrp -R adm /dev/snd
 fi
 
+mkdir -p $HOME/workspace
+chown -R $USER:$USER $HOME/workspace
+
 # VNC password
 VNC_PASSWORD=${PASSWORD:-ubuntu}
 
